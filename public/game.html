@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h3>Tu Pokémon secreto: <img id="secret" height="120">
+</h3>
+<h2 id="turn">Esperando jugador...</h2>
+<h2 id="scoreboard"></h2>
+
+<div id="board"></div>
+
+<input id="guessInput" placeholder="Adivinar Pokémon">
+<button onclick="guess()">Adivinar</button>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="game.js"></script>
+
+<div id="popup" class="popup">
+  <div class="popup-content">
+    <button id="rematchBtn" onclick="rematch()" style="display:none;">Revancha</button>
+    <h2 id="popup-text"></h2>
+  </div>
+</div>
+
+</body>
+</html>

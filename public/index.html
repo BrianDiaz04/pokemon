@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pokémon Guess</title>
+</head>
+<body>
+  <h1>Quién es Quién Pokémon</h1>
+  <input id="room" placeholder="Código de sala" />
+  <button onclick="join()">Entrar</button>
+
+  <script>
+    function join() {
+      const room = document.getElementById('room').value;
+      window.location.href = `/game.html?room=${room}`;
+    }
+  </script>
+</body>
+</html>
