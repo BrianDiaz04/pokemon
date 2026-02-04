@@ -5,22 +5,58 @@
 </head>
 <body>
 
-<h3>Tu Pokémon secreto: <img id="secret" height="120">
-</h3>
-<h2 id="turn">Esperando jugador...</h2>
-<h2 id="scoreboard"></h2>
+<!-- ================= LOBBY ================= -->
+<div id="lobbyScreen" class="hidden">
+  <h1>Elegir juego</h1>
+  <h3 id="status">Esperando jugador...</h3>
 
-<div id="board"></div>
+  <button
+    id="whoClassicBtn"
+    onclick="selectGame('whoiswho','classic')"
+    disabled>
+    Quién es Quién (Clásico)
+  </button>
 
-<input id="guessInput" placeholder="Adivinar Pokémon">
-<button onclick="guess()">Adivinar</button>
+  <button
+    id="whoRandomBtn"
+    onclick="selectGame('whoiswho','random')"
+    disabled>
+    Quién es Quién (Random)
+  </button>
+
+  <button
+    id="towerBtn"
+    disabled>
+    Juego de Torre (próximamente)
+  </button>
+</div>
+
+<!-- ================= QUIÉN ES QUIÉN ================= -->
+<div id="whoiswhoScreen" class="hidden">
+
+  <h3>Tu Pokémon secreto:
+    <img id="secret" height="120">
+  </h3>
+
+  <h2 id="turn">Esperando jugador...</h2>
+  <h2 id="scoreboard"></h2>
+
+  <div id="board"></div>
+
+  <input id="guessInput" placeholder="Adivinar Pokémon">
+  <button onclick="guess()">Adivinar</button>
+
+</div>
 
 <script src="/socket.io/socket.io.js"></script>
 <script src="game.js"></script>
 
+<!-- ================= POPUP ================= -->
 <div id="popup" class="popup">
   <div class="popup-content">
-    <button id="rematchBtn" onclick="rematch()" style="display:none;">Revancha</button>
+    <button id="rematchBtn" onclick="rematch()" style="display:none;">
+      Revancha
+    </button>
     <h2 id="popup-text"></h2>
   </div>
 </div>

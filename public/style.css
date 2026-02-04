@@ -53,3 +53,18 @@ button.eliminated {
   text-align: center;
   font-size: 24px;
 }
+.poke-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.poke-name {
+  margin-top: 4px;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 14px;
+}
+.hidden {
+  display: none;
+}
